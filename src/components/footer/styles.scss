@@ -1,0 +1,58 @@
+@use "../../Sass/var" as coolers;
+
+.footer {
+  min-height: 30vh;
+  background-color: coolers.$primary-color;
+  color: #fff;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .sec1,
+  .sec2,
+  .sec3 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .logo {
+      width: 60%;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .sec3 {
+    align-items: end;
+    @media (max-width: 768px) {
+      align-items: start;
+    }
+  }
+  .sec2 {
+    align-items: center;
+    @media (max-width: 768px) {
+      align-items: start;
+    }
+    .links {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.reserved-rights {
+  padding: 12px;
+  text-align: center;
+  background-color: coolers.$fourth-color;
+  text-align: center;
+  font-weight: 600;
+}
