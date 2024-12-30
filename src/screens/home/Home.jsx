@@ -18,7 +18,7 @@ const Home = () => {
                             <h1 className='heading2'>KingsWorld</h1>
                         </div>
                         <p className='tagline'>Invest with us, grow your portfolio, join people and earn performance bonus </p>
-                        <Link className='hero-join-link'>Join Now</Link>
+                        <Link to={"/signup"} className='hero-join-link'>Join Now</Link>
                     </div>
                     <div className="right">
                         <img src={heroimg} alt="" className='hero-img' />
@@ -36,13 +36,10 @@ const Home = () => {
                         <div className="right">
                             <div className="para">
                                 <h2>Join Us with 10k Investment</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit laboriosam, adipisci doloremque iusto reprehenderit nisi eius voluptas architecto quidem?</p>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit laboriosam, adipisci doloremque iusto reprehenderit nisi eius voluptas architecto quidem?</p>
+                                <p>KingsWorld is a revolutionary network marketing platform designed to unlock earning opportunities. With a one-time payment of ₹10,000, users gain access to an exclusive portal</p>
+                                <p>KingsWorld combines the power of network marketing with ad-based income generation. Start your journey with an affordable ₹10,000 and discover a world of possibilities. Our intuitive dashboard makes earning effortless and rewarding.</p>
                             </div>
-                            <div className="para">
-                                <h2>Join Us with 10k Investment</h2>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sit laboriosam, adipisci doloremque iusto reprehenderit nisi eius voluptas architecto quidem?</p>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -53,7 +50,7 @@ const Home = () => {
                                 <span>InvestMent Procedure</span>
                                 <h1>Invest minimum required amount</h1>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet totam possimus praesentium ab minus consectetur in est ducimus error. Ea quae dignissimos minima ipsum!</p>
+                            <p>Dive into KingsWorld's unique ecosystem, where ₹10,000 opens the doors to an earning platform like no other. Browse ads, earn consistently, and explore the potential of network marketing through our advanced software.</p>
                             <Link className='knowmore'>Know More</Link>
                         </div>
                         <div className="right serv-right1">
@@ -67,7 +64,7 @@ const Home = () => {
                         <div className="right">
                             <div className="service-info-heads">
                                 <span>InvestMent Procedure</span>
-                                <h1>Invest minimum required amount</h1>
+                                <h1>View Ad and Earn Money</h1>
                             </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet totam possimus praesentium ab minus consectetur in est ducimus error. Ea quae dignissimos minima ipsum!</p>
                             <Link className='knowmore'>Know More</Link>
@@ -80,7 +77,7 @@ const Home = () => {
                                 <span>InvestMent Procedure</span>
                                 <h1>Invest minimum required amount</h1>
                             </div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas amet totam possimus praesentium ab minus consectetur in est ducimus error. Ea quae dignissimos minima ipsum!</p>
+                            <p>KingsWorld combines the power of network marketing with ad-based income generation. Start your journey with an affordable ₹10,000 and discover a world of possibilities. Our intuitive dashboard makes earning effortless and rewarding.</p>
                             <Link className='knowmore'>Know More</Link>
                         </div>
                         <div className="right serv-right1">

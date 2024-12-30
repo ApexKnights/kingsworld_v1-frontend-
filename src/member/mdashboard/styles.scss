@@ -1,0 +1,145 @@
+@use "../../Sass/var" as coolers;
+
+.client-dashboard {
+  .hero {
+    min-height: 80vh;
+    background-color: coolers.$primary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    @media (max-width: 500px) {
+      padding: 0px 15px;
+    }
+    img {
+      height: 180px;
+      @media (max-width: 500px) {
+        height: 90px;
+      }
+    }
+    .heads {
+      text-align: center;
+      h1 {
+        font-size: 70px;
+        font-weight: 900;
+        color: #fff;
+        @media (max-width: 500px) {
+          font-size: 40px;
+        }
+      }
+      h3 {
+        font-size: 25px;
+        font-weight: 800;
+        color: #fff;
+      }
+    }
+    h2 {
+      font-weight: 900;
+      color: #fff;
+      font-size: 45px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      @media (max-width: 500px) {
+        font-size: 20px;
+      }
+      span {
+        color: rgb(151, 250, 151);
+        font-size: 45px;
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+    }
+    span {
+      color: #fff;
+      font-size: 20px;
+      @media (max-width: 500px) {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+    .coming-soon {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px;
+      background: linear-gradient(#ff5e5e, rgb(205, 43, 255));
+      border-radius: 20px;
+      @media (max-width: 500px) {
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  }
+  .view-ads {
+    min-height: 80vh;
+    padding: 30px 20px;
+    background-color: coolers.$Secondary-color;
+    .ad-head {
+      text-align: center;
+      font-weight: 700;
+      padding-bottom: 40px;
+
+      h2 {
+        font-size: 35px;
+        font-weight: 900;
+        @media (max-width: 500px) {
+          font-size: 20px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .all-ads {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      .ad-box {
+        width: 70%;
+        padding: 10px 12px;
+        min-height: 600px;
+        gap: 20px;
+        background-color: #eeeeee;
+        box-shadow: 2px 2px #000;
+        @media (max-width: 768px) {
+          width: 90%;
+        }
+        @media (max-width: 425px) {
+          width: 96%;
+        }
+        .upper {
+          height: 500px;
+          width: 100%;
+
+          img {
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            object-fit: cover;
+          }
+        }
+        .lower {
+          min-height: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+          button {
+            outline: none;
+            border: none;
+            padding: 10px 20px;
+            background-color: #5e91ff;
+            color: #fff;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 40px;
+
+  .prof {
+    min-height: 400px;
+    width: 90%;
+    background-color: rgb(53, 53, 173);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    span {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .update-pass {
+      padding: 12px;
+      background-color: rgb(75, 75, 187);
+      input,
+      button {
+        padding: 10px;
+        outline: none;
+        border: none;
+      }
+      button {
+      }
+    }
+  }
+}

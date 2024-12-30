@@ -1,0 +1,83 @@
+@use "../../Sass/var" as coolers;
+
+.ham-ico {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0%;
+  left: 0%;
+  font-size: 20px;
+  padding: 10px;
+  background-color: coolers.$primary-color;
+  color: #fff;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
+.admin-sider,
+.admin-menu-sider {
+  width: 20%;
+  min-height: 100vh;
+  position: sticky;
+  top: 0;
+  padding: 0px 20px;
+  background-color: coolers.$primary-color;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h2 {
+      font-size: 35px;
+      padding-top: 30px;
+      color: #fff;
+    }
+    .link-box {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      .link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 17px;
+        font-weight: 600;
+      }
+      .link-ico {
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
+  button {
+    margin-bottom: 40px;
+    padding: 10px 0px;
+    outline: none;
+    border: none;
+    background-color: coolers.$Secondary-color;
+  }
+}
+
+.admin-menu-sider {
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  @media (max-width: 768px) {
+    display: flex;
+    width: 60%;
+  }
+  .close-butt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    background-color: rgb(194, 36, 36);
+    color: #fff;
+  }
+}
