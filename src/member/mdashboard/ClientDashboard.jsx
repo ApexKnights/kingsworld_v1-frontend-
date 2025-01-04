@@ -60,7 +60,8 @@ const ClientDashboard = () => {
                     <h1>Hii, {user?.username}</h1>
                     <h3>Welcome to Kings World</h3>
                 </div>
-                <h2>Wallet Money - <span> {user?.wallet} /-</span></h2>
+                <h2> Ad Wallet Money - <span> {user?.wallet} /-</span></h2>
+                <h2>Wallet Money - <span> {user?.wallet2} /-</span></h2>
                 <span>Welcome to your dashboard, Wallet balance id provided on the top right of your dashboard, scroll below to earn wallet money through Ads</span>
                 <span className='coming-soon'>Nominee and investment features are coming soon</span>
             </div>

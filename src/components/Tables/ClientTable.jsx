@@ -18,7 +18,9 @@ const ClientTable = ({ tablehead, tabledata, deleteButt, editButt, headfont, sta
     const npage = Math.ceil(tabledata.length / recordsPerPage)
     const numbers = [...Array(npage + 1).keys()].slice(1)
     const [addmoney, setAddMoney] = useState('')
+    const [addmoney2, setAddMoney2] = useState('')
     const [loading, setLoading] = useState(false)
+    const [loading2, setLoading2] = useState(false)
 
     const getData = () => {
         if (clientname.length === 0) {
@@ -63,6 +65,66 @@ const ClientTable = ({ tablehead, tabledata, deleteButt, editButt, headfont, sta
                 timer: 1200,
             })
             setLoading(false)
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+            await Swal.fire({
+                title: "Something Went Wrong",
+                icon: "error",
+                timer: 1200,
+            })
+        }
+    }
+    const deleteUserWallet = async (userId) => {
+        try {
+            setLoading(true)
+            const res = await axios.put(`${server}/user/remove-ad-money/${userId}`, { addmoney }, { withCredentials: true });
+            await Swal.fire({
+                title: res.data.response,
+                icon: "success",
+                timer: 1200,
+            })
+            setLoading(false)
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+            await Swal.fire({
+                title: "Something Went Wrong",
+                icon: "error",
+                timer: 1200,
+            })
+        }
+    }
+    const updateUserWallet2 = async (userId) => {
+        try {
+            setLoading2(true)
+            const res = await axios.put(`${server}/user/ad-money-main/${userId}`, { addmoney2 }, { withCredentials: true });
+            await Swal.fire({
+                title: res.data.response,
+                icon: "success",
+                timer: 1200,
+            })
+            setLoading2(false)
+            window.location.reload()
+        } catch (error) {
+            console.log(error)
+            await Swal.fire({
+                title: "Something Went Wrong",
+                icon: "error",
+                timer: 1200,
+            })
+        }
+    }
+    const deleteUserWallet2 = async (userId) => {
+        try {
+            setLoading2(true)
+            const res = await axios.put(`${server}/user/remove-ad-money-main/${userId}`, { addmoney2 }, { withCredentials: true });
+            await Swal.fire({
+                title: res.data.response,
+                icon: "success",
+                timer: 1200,
+            })
+            setLoading2(false)
             window.location.reload()
         } catch (error) {
             console.log(error)
@@ -135,11 +197,25 @@ const ClientTable = ({ tablehead, tabledata, deleteButt, editButt, headfont, sta
                                         <p>Update Wallet -
                                             <input type="number" placeholder='Enter Money' onChange={(e) => setAddMoney(e.target.value)} />
                                             <button onClick={() => updateUserWallet(td.userId)}>Update</button>
+                                            <button className='del' onClick={() => deleteUserWallet(td.userId)}>Delete</button>
                                         </p>
                                     </div>
                                 }
 
                             </td>
+                            <td>
+                                <p>INR {td.wallet2}</p>
+                                {
+                                    loading2 ? <span><b>Updating Wallet ....</b></span> : <div className="update">
+                                        <p>Update Wallet -
+                                            <input type="number" placeholder='Enter Money' onChange={(e) => setAddMoney2(e.target.value)} />
+                                            <button onClick={() => updateUserWallet2(td.userId)}>Update</button>
+                                            <button className='del' onClick={() => deleteUserWallet2(td.userId)}>Delete</button>
+                                        </p>
+                                    </div>
+                                }
+                            </td>
+                            <td>{td.under}</td>
                             <td>
                                 <button className='del-butt' onClick={() => deleteUser(td.userId)}>Delete User</button>
                             </td>

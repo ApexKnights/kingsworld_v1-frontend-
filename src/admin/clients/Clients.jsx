@@ -10,27 +10,35 @@ const Clients = () => {
     const tablehead = [
         {
             id: 1,
-            headers: "Name Of Customer"
+            headers: "Name "
         },
         {
             id: 2,
-            headers: "Address 1"
+            headers: "UserId"
         },
         {
             id: 3,
-            headers: "Phone Number"
+            headers: "email"
         },
         {
             id: 4,
-            headers: "Specification"
+            headers: "Mobile"
         },
         {
             id: 5,
-            headers: "Sales"
+            headers: "Adhaar | Pan"
         },
         {
             id: 6,
-            headers: "Doc"
+            headers: "Ads Wallet"
+        },
+        {
+            id: 6,
+            headers: "Wallet"
+        },
+        {
+            id: 6,
+            headers: "under"
         },
         {
             id: 7,

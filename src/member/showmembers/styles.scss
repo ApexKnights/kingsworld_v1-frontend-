@@ -1,0 +1,80 @@
+.showmembers {
+  padding: 12px;
+  h1 {
+    text-align: center;
+    padding-top: 20px;
+  }
+  .joinman-cards {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+    .join-mem {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 15px;
+      width: 22%;
+      padding: 10px;
+      text-align: center;
+      background-color: #6658bd;
+      min-height: 200px;
+      color: #fff;
+      border-radius: 20px;
+      @media (max-width: 768px) {
+        width: 50%;
+      }
+      @media (max-width: 500px) {
+        width: 90%;
+      }
+      h4 {
+        padding: 10px 30px;
+        background-color: #3e886c;
+        border-radius: 20px;
+        button {
+          outline: none;
+          border: none;
+          padding: 3px 6px;
+          border-radius: 20px;
+        }
+      }
+    }
+  }
+  .user-under-sec {
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    height: 40vh;
+    overflow: auto;
+    padding: 20px;
+    background-color: #356e41;
+    color: #fff;
+    @media (max-width: 520px) {
+      top: 5%;
+      left: 5%;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    .cross {
+      position: absolute;
+      top: 2%;
+      right: 2%;
+    }
+    .userUnders {
+      padding: 10px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #6658bd;
+      gap: 10px;
+      margin: 10px 0px;
+    }
+  }
+}

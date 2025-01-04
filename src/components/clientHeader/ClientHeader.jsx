@@ -32,6 +32,8 @@ const ClientHeader = () => {
             </Link>
             <div className="right-view">
                 <Link to={"/profile"} className="link">Profile</Link>
+                <Link to={"/showmembers"} className="link">Members</Link>
+                <Link to={"/joinmember"} className="link">Join</Link>
                 <button onClick={handleLogout}>Logout</button>
             </div>
         </div>

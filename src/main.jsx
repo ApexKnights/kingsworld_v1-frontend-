@@ -8,6 +8,7 @@ import { ContextProvider } from './context/useContext.jsx'
 
 
 export const server = "https://kingsworldv1-backend.onrender.com/api/v1"
+// export const server = "http://localhost:5000/api/v1"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
