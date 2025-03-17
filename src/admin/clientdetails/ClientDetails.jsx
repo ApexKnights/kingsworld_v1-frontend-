@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./styles.scss"
 import axios from 'axios';
 import { server } from '../../main';
@@ -9,18 +9,15 @@ import personshow from "../../assets/person-show-kw.png"
 import { RiEmotionNormalFill } from "react-icons/ri";
 import { MdOutlineStar } from "react-icons/md";
 import AdsStatus from '../../components/AdsStatus/adstatus';
-import { UserContext } from '../../context/useContext';
 
 
 const ClientDetails = () => {
+    const userId = useParams().clientid;
     const [theuser, setTheUser] = useState({})
     const [allnetworks, setAllNetWorks] = useState(null)
     const [allnetworkmoney, setAllNetWorkMoney] = useState(null)
     const [rewards, setRewards] = useState({ pos: "" })
     const [loading, setLoading] = useState(false)
-    const { user } = useContext(UserContext)
-
-    const userId = user?.userId
     const getrequestedUser = async () => {
         try {
 

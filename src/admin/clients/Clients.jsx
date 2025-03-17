@@ -42,6 +42,10 @@ const Clients = () => {
         },
         {
             id: 7,
+            headers: "Details"
+        },
+        {
+            id: 8,
             headers: "Action"
         }
     ]
@@ -59,6 +63,8 @@ const Clients = () => {
     useEffect(() => {
         getAllUsers()
     }, [])
+
+
     return (
         <div className='client-table'>
             {

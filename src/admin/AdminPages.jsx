@@ -7,6 +7,7 @@ import Clients from './clients/Clients'
 import Requests from './requests/Requests'
 import ViewAds from './viewads/ViewAds'
 import AdminProfile from './AdminProfile/AdminProfile'
+import ClientDetails from './clientdetails/ClientDetails'
 
 const AdminPages = () => {
 
@@ -27,6 +28,7 @@ const AdminPages = () => {
                     <Route path='*' element={<AdminDashboard />} />
                     <Route path='/addads' element={<CreateAds />} />
                     <Route path='/clients' element={<Clients />} />
+                    <Route path='/clientdetails/:clientid' element={<ClientDetails />} />
                     <Route path='/requests' element={<Requests />} />
                     <Route path='/viewads' element={<ViewAds />} />
                     <Route path='/profile' element={<AdminProfile />} />

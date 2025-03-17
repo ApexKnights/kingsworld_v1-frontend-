@@ -217,6 +217,9 @@ const ClientTable = ({ tablehead, tabledata, deleteButt, editButt, headfont, sta
                             </td>
                             <td>{td.under}</td>
                             <td>
+                                <Link style={{ padding: "4px 8px", background: "black", color: "white", textDecoration: "none" }} to={`/clientdetails/${td.userId}`} >Details</Link>
+                            </td>
+                            <td>
                                 <button className='del-butt' onClick={() => deleteUser(td.userId)}>Delete User</button>
                             </td>
                         </tr>
